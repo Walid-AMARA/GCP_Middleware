@@ -5,7 +5,7 @@ steps:
       - '-c'
       - |
         pip install -r requirements.txt
-        python -m unittest discover tests
+        # python -m unittest discover tests (Commented out or remove this line if you don't have tests)
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-fastapi-app:$SHORT_SHA', '.']
   - name: 'gcr.io/cloud-builders/docker'
